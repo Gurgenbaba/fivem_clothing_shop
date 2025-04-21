@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.log
+*.tmp
+*.bak
+*.zip
+html/node_modules/
+*.iml
+.vscode/
+.idea/
+.env
+config.json
