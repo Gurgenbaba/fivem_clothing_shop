@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kleiderladen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="clothing-ui" class="gta-ui">
+    <div class="header">
+      <h1>Kleiderladen</h1>
+      <button class="close-btn" onclick="closeUI()">X</button>
+    </div>
+
+    <div class="tabs">
+      <button onclick="selectCategory('tops')">Oberteile</button>
+      <button onclick="selectCategory('pants')">Hosen</button>
+      <button onclick="selectCategory('shoes')">Schuhe</button>
+      <button onclick="selectCategory('accessories')">Zubehör</button>
+    </div>
+
+    <div class="controls">
+      <div class="row">
+        <label>Modell:</label>
+        <button onclick="changeDrawable(-1)">←</button>
+        <span id="drawable-index">0</span>
+        <button onclick="changeDrawable(1)">→</button>
+      </div>
+      <div class="row">
+        <label>Farbe:</label>
+        <button onclick="changeTexture(-1)">←</button>
+        <span id="texture-index">0</span>
+        <button onclick="changeTexture(1)">→</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <label>Stil:</label>
+      <select id="style-select">
+        <option value="freizeit">Freizeit</option>
+        <option value="sport">Sport</option>
+        <option value="business">Business</option>
+      </select>
+    </div>
+
+    <div class="summary">
+      <span>Preis: <span id="price">$0</span> / Gesamt: <span id="total-price">$0</span></span>
+    </div>
+
+    <div class="actions">
+      <button onclick="purchaseOutfit()">Kaufen</button>
+    </div>
+
+    <div class="saved-outfits">
+      <h2>Gespeicherte Outfits</h2>
+      <div id="saved-outfits"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
